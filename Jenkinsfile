@@ -6,7 +6,7 @@ pipeline {
     stage ('Build'){
       steps{
         echo "Builing the project"
-        sh 'ajbfagfiaf'
+        
     }
   }
   }
