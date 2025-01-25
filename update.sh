@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Define the source and destination directories
-SOURCE_DIR="/mnt/cdimage"
-DEST_DIR="."
+
 LIST="beherachittaranjan488@gmail.com"  # Recipient email address
 DIFF="change.txt"  # File to store git diff output
 
@@ -10,9 +9,6 @@ DIFF="change.txt"  # File to store git diff output
 git checkout main
 git pull origin main
 
-# Synchronize directories with rsync
-time rsync -avz --delete --exclude='.svn/' $SOURCE_DIR/D11/ $DEST_DIR/D12/
-time rsync -avz --delete --exclude='.svn/' $SOURCE_DIR/D12/ $DEST_DIR/D13/
 
 # Change to the destination directory
 cd $DEST_DIR
