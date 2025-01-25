@@ -9,8 +9,8 @@ pushd .
 git checkout -t origin/main
 
 
-time rsync -avz --delete --exclude='.svn/' $SOURCE_DIR/D11/     $DEST_DIR//D11/  
 time rsync -avz --delete --exclude='.svn/' $SOURCE_DIR/D11/     $DEST_DIR//D12/  
+time rsync -avz --delete --exclude='.svn/' $SOURCE_DIR/D12/     $DEST_DIR//D13/  
 
 # Change to the destination directory
 cd $DEST_DIR
