@@ -17,6 +17,7 @@ cd $DEST_DIR
 if $(git status | grep -s -q "working tree clean");then 
   echo No changes detected - exiting
   echo "Success3"
+  git diff >> change.txt
 else 
   git status 
   git diff >> change.txt
