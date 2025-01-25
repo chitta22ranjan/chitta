@@ -9,7 +9,6 @@ DIFF="change.txt"  # File to store git diff output
 git checkout main
 git pull origin main
 
-
 # Change to the destination directory
 cd $DEST_DIR
 
@@ -35,8 +34,11 @@ else
   SUBJECT="Git Changes for $(date '+%Y-%m-%d')"
   TO=$LIST  # Email recipient
 
-  # Send the email with the change.txt file attached using the mail command
-  echo "The changes from git diff are attached in the file $DIFF." | mail -s "$SUBJECT" -a "$DIFF" "$TO"
+  # Send the email with the change.txt file attached using sendmail
+  echo "Subject: $SUBJECT" > email.txt
+  echo "The changes from git diff are attached in the file $DIFF." >> email.txt
+  sendmail -v "$TO" < email.txt
+  rm email.txt
   
   echo "Email sent with changes attached."
 fi
