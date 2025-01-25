@@ -12,12 +12,12 @@ time rsync -avz --delete --exclude='.svn/' $SOURCE_DIR/D12/     $DEST_DIR//D13/
 
 # Change to the destination directory
 cd $DEST_DIR
-
+git diff >> change.txt
 # Check for changes and commit them
 if $(git status | grep -s -q "working tree clean");then 
   echo No changes detected - exiting
   echo "Success3"
-  git diff >> change.txt
+  
 else 
   git status 
   git diff >> change.txt
