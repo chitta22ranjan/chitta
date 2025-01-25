@@ -1,7 +1,7 @@
 #!/bin/bash
 SOURCE_DIR="/mnt/cdimage"
 DEST_DIR="."
-EMAIL="recipient@example.com" # Replace with recipient email
+EMAIL="recipient@example.com" 
 SUBJECT="Git Diff Report: $(date '+%Y-%m-%d %H:%M:%S')"
 CHANGE_FILE="change.txt"
 
