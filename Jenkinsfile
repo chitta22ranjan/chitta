@@ -1,6 +1,4 @@
 #!/bin/bash
-
-# Define variables
 SOURCE_DIR="/mnt/cdimage"
 DEST_DIR="."
 EMAIL="recipient@example.com" # Replace with recipient email
